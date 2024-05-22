@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" styleClass="bg-100" stylesheets="@../styles/color.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.tilek.downloader.gui.register.RegisterController">
+   <children>
+      <VBox alignment="CENTER" stylesheets="@../styles/color.css">
+         <children>
+            <Text fill="#fae8ff" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accent-200" text="Create new account">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="30.0" />
+               </font>
+            </Text>
+         </children></VBox>
+      <VBox alignment="CENTER_LEFT" minHeight="250.0" minWidth="500.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <Label fx:id="error" text="Error check fields!" textFill="RED" visible="false">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="12.0" />
+               </font>
+            </Label>
+            <Text fill="#fae8ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="email" stylesheets="@../styles/color.css">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-300" />
+                  <String fx:value="accent-200" />
+               </styleClass>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Text fill="#fae8ff" layoutX="30.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="20.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="password">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="accent-200" />
+                  <String fx:value="bg-300" />
+               </styleClass>
+            </PasswordField>
+            <Text fill="#fae8ff" layoutX="30.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retype password">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="20.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="confirmPassword" stylesheets="@../styles/color.css">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="accent-200" />
+                  <String fx:value="bg-300" />
+               </styleClass></PasswordField>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" spacing="50.0" stylesheets="@../styles/color.css">
+         <children>
+            <Button fx:id="registerButton" mnemonicParsing="false" onAction="#onRegisterButtonHandler" stylesheets="@../styles/color.css" text="Create">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </padding>
+               <styleClass>
+                  <String fx:value="main-btn" />
+                  <String fx:value="main-btn-accept" />
+               </styleClass>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="15.0" />
+               </font></Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonHandler" stylesheets="@../styles/color.css" text="Cancel">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </padding>
+               <styleClass>
+                  <String fx:value="main-btn" />
+                  <String fx:value="main-btn-danger" />
+               </styleClass></Button>
+         </children>
+         <padding>
+            <Insets left="40.0" right="40.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</VBox>

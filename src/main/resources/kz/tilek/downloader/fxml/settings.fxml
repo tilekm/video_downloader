@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350.0" minWidth="500.0" prefWidth="500.0" styleClass="bg-100" stylesheets="@../styles/color.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.tilek.downloader.gui.settings.SettingsController">
+   <children>
+      <VBox alignment="CENTER">
+         <children>
+            <Text fill="#fae8ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Text fill="#fae8ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Download path">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="downloadPath" editable="false" focusTraversable="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></TextField>
+            <Button mnemonicParsing="false" onAction="#openSaveFolder" text="Open Folder" />
+         </children>
+         <opaqueInsets>
+            <Insets left="40.0" />
+         </opaqueInsets>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" spacing="20.0" stylesheets="@../styles/color.css">
+         <children>
+            <CheckBox fx:id="openAfterDownload" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" styleClass="accent-200" stylesheets="@../styles/color.css" text="Open path after download" wrapText="true">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="16.0" />
+               </font>
+            </CheckBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveButtonClicked" stylesheets="@../styles/color.css" text="Save">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="main-btn" />
+                        <String fx:value="main-btn-accept" />
+                     </styleClass>
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#changePasswordButtonClicked" stylesheets="@../styles/color.css" text="Change password" visible="false">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="JetBrains Mono ExtraBold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="main-btn" />
+                        <String fx:value="main-btn-danger" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="20.0" top="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>

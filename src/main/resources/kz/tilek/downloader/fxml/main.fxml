@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="400.0" minWidth="700.0" prefWidth="500.0" styleClass="bg-100" stylesheets="@../styles/color.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.tilek.downloader.gui.main.MainController">
+
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" stylesheets="@../styles/color.css">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="#fae8ff" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accent-200" text="VIDSTASH" wrappingWidth="223.99999856948853">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <StackPane prefHeight="36.0" prefWidth="660.0">
+         <children>
+            <Label fx:id="info" textFill="RED">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="17.0" />
+               </font></Label>
+            <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" visible="false" />
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER" prefHeight="22.0" prefWidth="660.0">
+         <children>
+            <Label text="Attempts left:" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="trys" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" stylesheets="@../styles/color.css">
+         <children>
+            <Button fx:id="loginButton" onAction="#loginButtonPress" text="Log in" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="main-btn" />
+               </styleClass>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <TextField fx:id="link" onKeyReleased="#onLinkEnteredHandler" prefHeight="41.0" prefWidth="299.0" promptText="Enter link">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="20.0" />
+               </font></TextField>
+            <Button fx:id="downloadButton" disable="true" onAction="#downloadButtonPress" text="Download" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="main-btn" />
+               </styleClass>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="preview" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </ImageView>
+            <Button onAction="#settingsButtonPress" text="Settings" textAlignment="CENTER" wrapText="true">
+               <styleClass>
+                  <String fx:value="main-btn" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <ChoiceBox fx:id="mediaType" prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

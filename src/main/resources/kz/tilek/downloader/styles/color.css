@@ -1,0 +1,53 @@
+.root{
+    -fx-font-family: "JetBrains Mono ExtraBold";
+}
+.primary-100{
+    -fx-text-fill: #2563eb ;
+}
+.primary-200{
+    -fx-text-fill: #598EF3;
+}
+.primary-300{
+    -fx-text-fill: #D3E6FE;
+}
+.accent-100{
+    -fx-text-fill:#d946ef;
+
+}
+.accent-200{
+    -fx-text-fill: #fae8ff;
+}
+.text-100{
+    -fx-text-fill: #cbd5e1;
+}
+.text-200{
+    -fx-text-fill: #94a3b8;
+}
+.bg-100{
+    -fx-background-color: #1e293b;
+}
+.bg-200{
+    -fx-background-color: #334155;
+}
+.bg-300{
+    -fx-background-color: #475569;
+}
+
+
+.main-btn{
+    -fx-text-fill: #fae8ff;
+    -fx-background-color: #334155;
+}
+.main-btn-accept{
+    -fx-background-color: rgba(0, 151, 5, 0.9);
+}
+.main-btn-danger{
+    -fx-background-color: #9a0000;
+}
+.main-btn:hover{
+    -fx-text-fill: #334155;
+    -fx-background-color: #fae8ff;
+}
+#loginLabel{
+    -fx-text-fill: #fae8ff;
+}
