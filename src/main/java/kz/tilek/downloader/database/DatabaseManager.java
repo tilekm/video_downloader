@@ -10,13 +10,15 @@ public class DatabaseManager {
 
     private static Connection connection;
     private static final Dotenv dotenv = Dotenv.load();
-    private static final String DB_URL = "jdbc:postgresql://" + dotenv.get("HOST") + ":" + dotenv.get("PORT") + "/" + dotenv.get("DBNAME");
+    private static final String DB_URL = "jdbc:postgresql://" + dotenv.get("HOST", "localhost") + ":" +
+            dotenv.get("PORT", "5432") + "/" + dotenv.get("DBNAME", "video_downloader");
 
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
                 Class.forName("org.postgresql.Driver");
-                connection = DriverManager.getConnection(DB_URL, dotenv.get("USER"), dotenv.get("PASSWORD"));
+                connection = DriverManager.getConnection(DB_URL, dotenv.get("USER", "postgres"),
+                        dotenv.get("PASSWORD", "postgres"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
